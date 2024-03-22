@@ -1,0 +1,211 @@
+@media only screen and (max-width: 768px){
+    .container{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 320px;
+    }
+    .header__top{
+        max-width: 257px;
+    }
+    .header__menu-burger{
+        display: block;
+    }
+    .header__menu-list{
+        display: none;
+    }
+    .header__content{
+        text-align: center;
+        margin-right: 0;
+        align-items: center;
+    }
+    .header__content-title{
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        max-width: 250px;
+    }
+    .header__content-text{
+        max-width: 290px;
+    }
+    .header__bottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .title{
+        font-size: 25px;
+        letter-spacing: 1.5px;
+    }
+    .header__image{
+        max-width: 260px;
+        height: 272px;
+        align-self: flex-end;
+    }
+    .about__title{
+        max-width: 290px;
+        margin-bottom: 42px;
+    }
+    .pets__body{
+        margin-top: 0;
+    }
+    .about__text{
+        text-align: justify;
+        max-width: 260px;
+    }
+    .about__container{
+        margin: 42px auto;
+        gap: 0;
+    }
+    .about__content{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 42px;
+    }
+    .pets__card:nth-child(2){
+        display: none;
+    }
+    .pets__container{
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    .pets__arrow{
+        display: none;
+    }
+    .pets__arrow--mobile{
+        display: block;
+    }
+    .pets__arrows--mobile{
+        display: flex;
+        gap: 80px;
+        margin-bottom: 42px
+    }
+    .pets__card:nth-child(1){
+        margin: 0 auto;
+    }
+    .pets__body{
+        margin: 20px;
+    }
+    .pets__button{
+        margin-bottom: 0;
+    }
+    .help__title{
+        width: 230px
+    }
+    .help__slider{
+        max-width: 290px;
+        display: grid;
+        grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    .help__container{
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+    .help__card{
+        max-width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .help__image{
+        width: 50px;
+        height: 50px;
+    }
+    .help__image img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .help__text{
+        font-size: 15px;
+        line-height: 110%; /* 16.5px */
+        letter-spacing: 0.9px;
+    }
+    .help__card:nth-child(1){
+        grid-column: 1;
+    }
+    .help__card:nth-child(2){
+        grid-column: 2;
+    }
+    .help__card:nth-child(3){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .help__card:nth-child(4){
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .help__card:nth-child(5){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .help__card:nth-child(6){
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .help__card:nth-child(7){
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .help__card:nth-child(8){
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .help__card:nth-child(9){
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .donation{
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    .donation__container{
+        align-items: center
+    }
+    .donation__title{
+        max-width: 220px;
+    }
+    .donation__content{
+        align-items: center;
+    }
+    .donation__text{
+        font-size: 14px;
+        line-height: 160%;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .donation__credit-card-number{
+        font-size: 15px;
+    }
+    .donation__legal-info{
+        text-align: justify;
+        font-size: 13px;
+    }
+    .donation__image--dog{
+        max-width: 300px;
+        height: auto;
+        margin: 0;
+    }
+    .donation__image--dog img{
+        width: 100%;
+
+        height: auto;
+        object-fit: cover;
+    }
+    .footer__socials{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__locations{
+        margin-top: 40px;
+        .footer__title{
+            max-width: 280px;
+        }
+    }
+    .footer__content{
+        flex-direction: column;
+        max-width: 300px;
+    }
+}

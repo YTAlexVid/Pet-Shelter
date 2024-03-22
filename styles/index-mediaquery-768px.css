@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1230px){
+    .container{
+        max-width: 738px;
+    }
+    header{
+        padding-top: 30px;
+    }
+    .header__top{
+        margin-bottom: 60px;
+    }
+    .header__bottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__content-button{
+        align-self: center;
+    }
+    .header__content{
+        margin-bottom: 100px
+    }
+    .header__image{
+        max-width: 569px;
+        height: 593px;
+    }
+    .about__container{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 80px
+    }
+    .pets__card:nth-child(3){
+        display: none;
+    }
+    .pets__cards{
+        max-width: 580px;
+    }
+    .help__slider{
+        max-width: 630px;
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        row-gap: 55px;
+        column-gap: 60px;
+    }
+    .help__card{
+        max-width: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .help__card:nth-child(1){
+        grid-column: 1;
+    }
+    .help__card:nth-child(2){
+        grid-column: 2;
+    }
+    .help__card:nth-child(3){
+        grid-column: 3;
+    }
+    .help__card:nth-child(4){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .help__card:nth-child(5){
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .help__card:nth-child(6){
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .help__card:nth-child(7){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .help__card:nth-child(8){
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .help__card:nth-child(9){
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .donation__container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .donation__content{
+        margin-bottom: 60px;
+    }
+    .footer__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__content{
+        margin-bottom: 65px;
+    }
+    .footer__socials{
+        width: 350px;
+    }
+    .footer__locations{
+        width: 350px;
+    }
+}
