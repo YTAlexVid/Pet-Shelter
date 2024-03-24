@@ -55,30 +55,18 @@
   <section class="pets">
     <div class="container pets__container">
       <h2 class="title pets__title">Our friends who are looking for a house</h2>
-      <div class="pets__body">
-        <button class="pets__arrow"><img src="./assets/arrow-left.png"></button>
-        <div class="pets__cards">
-          <div class="pets__card">
-            <div class="pets__image"><img src="./assets/pets-katrine.png" alt="Cat Katrine"></div>
-            <div class="pets__name">Katrine</div>
-            <button class="pets__card-button">Learn more</button>
-          </div>
-          <div class="pets__card">
-            <div class="pets__image"><img src="./assets/pets-jennifer.png" alt="Dog Jennifer"></div>
-            <div class="pets__name">Jennifer</div>
-            <button class="pets__card-button">Learn more</button>
-          </div>
-          <div class="pets__card">
-            <div class="pets__image"><img src="./assets/pets-woody.png" alt="Dog Woody"></div>
-            <div class="pets__name">Woody</div>
-            <button class="pets__card-button">Learn more</button>
+      <div class="pets__body splide">
+        <button class="pets__arrow pets__arrow-left"><img src="./assets/images/arrow-left.png"></button>
+        <div class="splide__track">
+          <div class="pets__cards splide__list">
+
           </div>
         </div>
-        <button class="pets__arrow"><img src="./assets/arrow-right.png"></button>
+        <button class="pets__arrow pets__arrow-right"><img src="./assets/images/arrow-right.png"></button>
       </div>
         <div class="pets__arrows pets__arrows--mobile">
-          <button class="pets__arrow pets__arrow--mobile"><img src="./assets/arrow-left.png"></button>
-          <button class="pets__arrow pets__arrow--mobile"><img src="./assets/arrow-right.png"></button>
+          <button class="pets__arrow pets__arrow-left pets__arrow--mobile"><img src="./assets/images/arrow-left.png"></button>
+          <button class="pets__arrow pets__arrow-right pets__arrow--mobile"><img src="./assets/images/arrow-right.png"></button>
         </div>
       <button class="pets__button">Get to know the rest</button>
     </div>
@@ -175,5 +163,6 @@
     <div class="footer__image-dog"><img src="./assets/images/footer-puppy.png" alt="Footer Puppy"></div>
   </div>
 </footer>
+<script src="./assets/scripts/index-slider.mjs"></script>
 </body>
 </html>
