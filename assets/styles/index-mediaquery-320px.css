@@ -89,6 +89,22 @@
     .pets__button{
         margin-bottom: 0;
     }
+    .pets__modal-image{
+        display: none;
+    }
+    .pets__modal-inner{
+        width: 240px;
+        text-align: center;
+    }
+    .pets__modal-content{
+        padding: 0 10px 0;
+    }
+    .pets__modal-text{
+        text-align: justify;
+    }
+    .pets__modal-other-item{
+        text-align: left;
+    }
     .help__title{
         width: 230px
     }

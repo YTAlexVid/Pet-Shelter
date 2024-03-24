@@ -299,6 +299,84 @@ header{
     transition: all .25s;
 }
 
+.pets__modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+}
+.pets__modal-inner{
+    width: 900px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pets__modal-close{
+    position: relative;
+    background: none;
+    border: 2px solid #F1CDB3;
+    img{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+    }
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin-left: 100%;
+    border-radius: 50%;
+}
+.pets__modal-close:hover{
+    background: #F1CDB3;
+}
+.pets__modal-content{
+    background: #FAFAFA;
+    display: flex;
+    color: rgb(0, 0, 0);
+    font-family: Georgia;
+    border-radius: 10px;
+}
+.pets__modal-image img{
+    width: 500px;
+    height: 500px;
+    margin-right: 29px;
+}
+.pets__modal-title{
+    margin-top: 50px;
+    font-size: 35px;
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+.pets__modal-subtitle{
+    font-size: 20px;
+    line-height: 115%;
+    margin-bottom: 40px;
+}
+.pets__modal-text{
+    font-size: 15px;
+    line-height: 110%;
+    margin-bottom: 40px;
+}
+.pets__modal-other-item{
+    font-size: 15px;
+    line-height: 110%;
+    margin-bottom: 11px;
+    padding-left: 10px;
+    margin-left: 9px;
+    span{
+        font-weight: bold;
+    }
+}
+.pets__modal-other-item::marker {
+    content: '●';
+    font-size: 1em;
+    color: #F1CDB3;
+}
 /*----------------------------------------------------*/
 .help__container{
     display: flex;
