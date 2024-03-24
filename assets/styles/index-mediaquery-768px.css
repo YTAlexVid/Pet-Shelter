@@ -27,11 +27,26 @@
         align-items: center;
         gap: 80px
     }
-    .pets__card:nth-child(3){
-        display: none;
-    }
     .pets__cards{
         max-width: 580px;
+    }
+    .pets__modal-image img{
+        width: 350px;
+        height: 350px;
+        margin-right: 11px;
+    }
+    .pets__modal-inner{
+        width: 630px;
+    }
+    .pets__modal-text{
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .pets__modal-title{
+        margin-top: 10px;
+    }
+    .pets__modal-subtitle{
+        margin-bottom: 20px;
     }
     .help__slider{
         max-width: 630px;

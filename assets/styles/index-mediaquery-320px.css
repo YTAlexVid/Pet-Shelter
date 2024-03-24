@@ -47,6 +47,16 @@
     .pets__body{
         margin-top: 0;
     }
+    .pets__cards{
+        max-width: 270px;
+        margin: 0 auto !important;
+    }
+    .pets__card{
+        width: 270px !important;
+    }
+    .splide__track{
+        margin: 0 auto;
+    }
     .about__text{
         text-align: justify;
         max-width: 260px;
@@ -60,9 +70,6 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 42px;
-    }
-    .pets__card:nth-child(2){
-        display: none;
     }
     .pets__container{
         padding-top: 42px;
@@ -79,14 +86,27 @@
         gap: 80px;
         margin-bottom: 42px
     }
-    .pets__card:nth-child(1){
-        margin: 0 auto;
-    }
     .pets__body{
         margin: 20px;
     }
     .pets__button{
         margin-bottom: 0;
+    }
+    .pets__modal-image{
+        display: none;
+    }
+    .pets__modal-inner{
+        width: 240px;
+        text-align: center;
+    }
+    .pets__modal-content{
+        padding: 0 10px 0;
+    }
+    .pets__modal-text{
+        text-align: justify;
+    }
+    .pets__modal-other-item{
+        text-align: left;
     }
     .help__title{
         width: 230px
