@@ -47,6 +47,13 @@
     .pets__body{
         margin-top: 0;
     }
+    .pets__cards{
+        max-width: 270px;
+        margin: 0 auto !important;
+    }
+    .splide__track{
+        margin: 0 auto;
+    }
     .about__text{
         text-align: justify;
         max-width: 260px;

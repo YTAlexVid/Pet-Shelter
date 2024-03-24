@@ -42,21 +42,21 @@ function genBlock(i){
 for(let i = 0; i<8;i++){
     cards_container.innerHTML+=genBlock(i);
 }
-
 document.addEventListener('DOMContentLoaded', ()=>{
     let splidePets = new Splide('.splide', {
         type: 'slide',
         perMove: 1,
-        perPage: 3,
+        perPage: 1+(window.innerWidth>1230)+(window.innerWidth>768),
         pagination: false,
         arrows: false,
-        gap: '9%',
+        gap: (window.innerWidth>768?'9%':'0'),
     }).mount();
     document.querySelectorAll('.pets__arrow-right').forEach(e => e.addEventListener('click', () => splidePets.go('+1')));
     document.querySelectorAll('.pets__arrow-left').forEach(e => e.addEventListener('click', () => splidePets.go('-1')));
+    splidePets.on('resize', ()=>{
+        splidePets.options = {
+            perPage: 1+(window.innerWidth>1230)+(window.innerWidth>768),
+            gap: (window.innerWidth>768?'9%':'0'),
+        };
+    })
 })
-// splidePets.on('resize', ()=>{
-//     splidePets.options = {
-//         perPage: 1+((window.innerWidth>660)?1:0)+((window.innerWidth>960)?1:0),
-//     };
-// })
