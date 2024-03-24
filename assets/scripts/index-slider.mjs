@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     splidePets.on('resize', () => {
         splidePets.options = {
             perPage: 1 + (window.innerWidth > 1230) + (window.innerWidth > 768),
-            gap: (window.innerWidth > 768 ? '9%' : '0'),
+            gap: (window.innerWidth > 768 ? '9%' : '0')
         };
     })
     for (let i = 0; i < 8; i++) {

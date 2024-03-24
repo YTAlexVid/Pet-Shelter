@@ -51,6 +51,9 @@
         max-width: 270px;
         margin: 0 auto !important;
     }
+    .pets__card{
+        width: 270px !important;
+    }
     .splide__track{
         margin: 0 auto;
     }
