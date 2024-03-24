@@ -61,9 +61,6 @@
         flex-direction: column;
         margin-bottom: 42px;
     }
-    .pets__card:nth-child(2){
-        display: none;
-    }
     .pets__container{
         padding-top: 42px;
         padding-bottom: 42px;
@@ -78,9 +75,6 @@
         display: flex;
         gap: 80px;
         margin-bottom: 42px
-    }
-    .pets__card:nth-child(1){
-        margin: 0 auto;
     }
     .pets__body{
         margin: 20px;

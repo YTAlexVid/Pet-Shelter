@@ -31,7 +31,7 @@ img{
 /*----------------------------------------------------*/
 header{
 
-    background: url("../assets/start-screen-background.png");
+    background: url("../images/start-screen-background.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: #FFF;
@@ -431,7 +431,7 @@ header{
 /*----------------------------------------------------*/
 footer{
     padding-top: 40px;
-    background: url("../assets/start-screen-background.png");
+    background: url("../images/start-screen-background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }

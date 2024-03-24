@@ -27,9 +27,6 @@
         align-items: center;
         gap: 80px
     }
-    .pets__card:nth-child(3){
-        display: none;
-    }
     .pets__cards{
         max-width: 580px;
     }
