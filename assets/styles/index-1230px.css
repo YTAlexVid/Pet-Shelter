@@ -345,6 +345,7 @@ header{
     width: 500px;
     height: 500px;
     margin-right: 29px;
+    border-radius: 10px;
 }
 .pets__modal-title{
     margin-top: 50px;
