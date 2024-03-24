@@ -30,7 +30,7 @@ let pets=([
     {image: 'pets-freddie.png',
         name:'Freddie',
         type:'Cat'},
-])
+]).sort(() => Math.random() - 0.5);
 function genBlock(i){
     return `<div class="pets__card splide__slide">
                 <div class="pets__image"><img src="./assets/images/${pets[i].image}" alt="${pets[i].type} ${pets[i].name}"/></div>
