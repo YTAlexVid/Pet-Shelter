@@ -15,13 +15,27 @@
 <header class="header">
   <div class="container header__container">
       <div class="header__top">
-        <div class="header__brand">
+        <div class="header__brand header__brand-default">
           <a href="./index.html" class="header__brand-title">Cozy House</a>
           <div class="header__brand-subtitle">Shelter for pets in Boston</div>
         </div>
         <nav class="header__menu">
-          <div class="header__menu-burger">
-            <span></span>
+          <div class="header__burger_menu">
+            <input id="header__burger_menu-toggle" type="checkbox" />
+            <label class="header__burger_menu-btn" for="header__burger_menu-toggle">
+              <span></span>
+            </label>
+            <ul class="header__burger_menu-box">
+              <div class="header__brand">
+                <a href="./index.html" class="header__brand-title">Cozy House</a>
+                <div class="header__brand-subtitle">Shelter for pets in Boston</div>
+              </div>
+              <li><a class="header__burger_menu-item" href="#">Главная</a></li>
+              <li><a class="header__burger_menu-item" href="#">Проекты</a></li>
+              <li><a class="header__burger_menu-item" href="#">Команда</a></li>
+              <li><a class="header__burger_menu-item" href="#">Блог</a></li>
+              <li><a class="header__burger_menu-item" href="#">Контакты</a></li>
+            </ul>
           </div>
           <ul class="header__menu-list">
             <li class="header__menu-item"><a href="" class="header__menu-link">About the shelter</a></li>
