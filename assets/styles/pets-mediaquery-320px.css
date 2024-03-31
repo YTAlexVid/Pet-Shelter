@@ -2,12 +2,6 @@
     .pets__cards{
         max-width: 270px;
     }
-    .pets__card{
-        display: flex;
-    }
-    .pets__card:nth-child(n+4){
-        display: none;
-    }
     .pets__arrows{
         width: 300px;
     }

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./assets/styles/pets-1230px.css">
     <link rel="stylesheet" href="./assets/styles/pets-mediaquery-768px.css">
     <link rel="stylesheet" href="./assets/styles/pets-mediaquery-320px.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -50,56 +53,30 @@
     <section class="pets">
         <div class="container pets__container">
             <h2 class="title pets__title">Our friends who are looking for a house</h2>
-            <div class="pets__body">
-                <div class="pets__cards">
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-katrine.png" alt="Cat Katrine"></div>
-                        <div class="pets__name">Katrine</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-jennifer.png" alt="Dog Jennifer"></div>
-                        <div class="pets__name">Jennifer</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-woody.png" alt="Dog Woody"></div>
-                        <div class="pets__name">Woody</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-sophia.png" alt="Dog Woody"></div>
-                        <div class="pets__name">Sophia</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-timmy.png" alt="Dog Woody"></div>
-                        <div class="pets__name">Timmy</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-charly.png" alt="Dog Woody"></div>
-                        <div class="pets__name">Charly</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-scarlet.png" alt="Dog Woody"></div>
-                        <div class="pets__name">Scatlett</div>
-                        <button class="pets__card-button">Learn more</button>
-                    </div>
-                    <div class="pets__card">
-                        <div class="pets__image"><img src="./assets/images/pets-freddie.png" alt="Dog Woody"></div>
-                        <div class="pets__name">Freddie</div>
-                        <button class="pets__card-button">Learn more</button>
+            <div class="pets__body splide">
+                <div class="splide__track">
+                    <div class="pets__cards splide__list">
+
                     </div>
                 </div>
             </div>
-            <div class="pets__arrows pets__arrows--mobile">
-                <button class="pets__arrow pets__arrow--start"><img src="./assets/images/arrow-start.png"></button>
-                <button class="pets__arrow pets__arrow--left"><img src="./assets/images/arrow-prev.png"></button>
-                <div class="pets__page">1</div>
-                <button class="pets__arrow pets__arrow--right"><img src="./assets/images/arrow-next.png"></button>
-                <button class="pets__arrow pets__arrow--end"><img src="./assets/images/arrow-end.png"></button>
+            <div class="pets__arrows">
+                <button class="pets__arrow pets__arrow-begin"><img src="./assets/images/arrow-end.png"></button>
+                <button class="pets__arrow pets__arrow-left"><img src="./assets/images/arrow-left.png"></button>
+                <div class="pets__pagination">1</div>
+                <button class="pets__arrow pets__arrow-right"><img src="./assets/images/arrow-right.png"></button>
+                <button class="pets__arrow pets__arrow-end"><img src="./assets/images/arrow-end.png"></button>
+            </div>
+            <button class="pets__button">Get to know the rest</button>
+        </div>
+        <div class="pets__modal" style="display: none">
+            <div class="pets__modal-inner">
+                <button class="pets__modal-close">
+                    <img src="./assets/images/close_sign.png" alt="close">
+                </button>
+                <div class="pets__modal-content">
+
+                </div>
             </div>
         </div>
     </section>
@@ -138,5 +115,6 @@
         <div class="footer__image-dog"><img src="./assets/images/footer-puppy.png" alt="Footer Puppy"></div>
     </div>
 </footer>
+<script src="./assets/scripts/pets-slider.mjs"></script>
 </body>
 </html>
