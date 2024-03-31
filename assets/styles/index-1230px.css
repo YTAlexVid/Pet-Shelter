@@ -42,6 +42,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     margin-bottom: 60px;
 }
 .header__container{
@@ -169,6 +170,14 @@ header{
     background: #FAFAFA;
     transition: all .25s;
 }
+
+
+.header__burger_menu{
+    display: none;
+    position: relative;
+}
+
+
 /*----------------------------------------------------*/
 .about__container{
     display: flex;

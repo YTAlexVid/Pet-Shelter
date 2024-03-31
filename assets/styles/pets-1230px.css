@@ -27,29 +27,33 @@
 .pets {
     padding-bottom: 100px;
 }
-.pets__cards {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
+.pets__card{
+    border-radius: 12px;
+}
+.pets__image img{
+    width: 270px;
+    height: 270px;
+}
+.pets__cards{
     max-width: 1200px;
-    flex-wrap: wrap;
 }
 .pets__arrows{
     display: flex;
     width: 340px;
     justify-content: space-between;
 }
-.pets__page{
-    width: 52px;
-    background-color: #F1CDB3;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 52px;
-    display: flex;
-    border-radius: 100px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.pets__pagination{
+    width:52px;
+    height:52px;
+    background: #F1CDB3;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 52px;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+.pets__arrow-begin{
+    transform: scaleX(-100%);
 }
 .pets__arrow{
     position: relative;

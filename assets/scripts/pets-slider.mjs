@@ -1,6 +1,7 @@
 const cards_container = document.querySelector('.pets__cards');
 const pets_modal = document.querySelector('.pets__modal');
 const pets_modal_content = pets_modal.querySelector('.pets__modal-content');
+const pets_pagination = document.querySelector('.pets__pagination');
 pets_modal.querySelector('.pets__modal-close').addEventListener('click', ()=>{
     pets_modal.style.display='none';
     pets_modal_content.innerHTML='';
@@ -70,6 +71,31 @@ let pets = ([
         breed: 'Cat - British Shorthair',
         about: 'Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.'
     },
+
+    {
+        image: 'missing_image.png',
+        name: 'Test',
+        type: 'TEST',
+        age: Math.random() < 0.5? Math.floor(Math.random()*10+1).toString()+' years':Math.floor(Math.random()*12+1).toString()+' months',
+        breed: 'TEST - Test',
+        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, deserunt doloremque doloribus eligendi esse maiores maxime nihil nostrum odit possimus quasi quia repellendus sint soluta tempora vel veniam vitae? Vel.'
+    },
+    {
+        image: 'missing_image.png',
+        name: 'Test',
+        type: 'TEST',
+        age: Math.random() < 0.5? Math.floor(Math.random()*10+1).toString()+' years':Math.floor(Math.random()*12+1).toString()+' months',
+        breed: 'TEST - Test',
+        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, deserunt doloremque doloribus eligendi esse maiores maxime nihil nostrum odit possimus quasi quia repellendus sint soluta tempora vel veniam vitae? Vel.'
+    },    
+    {
+        image: 'missing_image.png',
+        name: 'Test',
+        type: 'TEST',
+        age: Math.random() < 0.5? Math.floor(Math.random()*10+1).toString()+' years':Math.floor(Math.random()*12+1).toString()+' months',
+        breed: 'TEST - Test',
+        about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, deserunt doloremque doloribus eligendi esse maiores maxime nihil nostrum odit possimus quasi quia repellendus sint soluta tempora vel veniam vitae? Vel.'
+    },
 ]).sort(() => Math.random() - 0.5);
 
 function genCard(i) {
@@ -119,28 +145,71 @@ for (let i = 0; i < pets.length; i++) {
     cards_container.innerHTML += genCard(i);
 }
 document.addEventListener('DOMContentLoaded', () => {
-    let splidePets = new Splide('.splide', {
+    let splidePets = new Splide( '.splide', {
         type: 'slide',
         perMove: 1,
-        perPage: 1 + (window.innerWidth > 1230) + (window.innerWidth > 768),
-        pagination: false,
+        perPage: 4,
+        gap: '40px',
         arrows: false,
-        gap: (window.innerWidth > 768 ? '9%' : '0'),
-    }).mount();
-    document.querySelectorAll('.pets__arrow-right').forEach(e => e.addEventListener('click', () => splidePets.go('+1')));
-    document.querySelectorAll('.pets__arrow-left').forEach(e => e.addEventListener('click', () => splidePets.go('-1')));
-    splidePets.on('resize', () => {
-        splidePets.options = {
-            perPage: 1 + (window.innerWidth > 1230) + (window.innerWidth > 768),
-            gap: (window.innerWidth > 768 ? '9%' : '0')
-        };
-    })
-    for (let i = 0; i < pets.length; i++) {
-        cards_container
-            .children.item(i)
-            .children.item(2)
-            .addEventListener('click', () => {
-                showModal(i);
-            })
+        pagination: false,
+        grid: {
+            rows: 2,
+            cols: 1,
+            gap : {
+                row: '30px',
+                col: '0rem',
+            },
+        },
+        breakpoints:{
+            1230:{
+                perPage: 2,
+                grid:{
+                    rows: 3,
+                }
+            },
+            768:{
+                perPage: 1,  
+            }
+        }
+    } ).mount(window.splide.Extensions);
+    function getMaxPage(){
+        let opt = splidePets.options;
+        return Math.ceil((pets.length-opt.perPage*opt.grid.rows)/opt.grid.rows);
     }
+    document.querySelector('.pets__arrow-left').addEventListener('click', ()=>{
+        splidePets.go('-1');
+        let page = Number(pets_pagination.innerHTML);
+        if(page>1){
+            page--;
+            pets_pagination.innerHTML=page.toString();
+        }
+    })
+    document.querySelector('.pets__arrow-right').addEventListener('click', ()=>{
+        splidePets.go('+1');
+        let page = Number(pets_pagination.innerHTML);
+        if(page<=getMaxPage()){
+            page++;
+            pets_pagination.innerHTML=page.toString();
+        }
+    })
+    document.querySelector('.pets__arrow-begin').addEventListener('click', ()=>{
+        splidePets.go(0);
+        pets_pagination.innerHTML=1;
+    })
+    document.querySelector('.pets__arrow-end').addEventListener('click', ()=>{
+        splidePets.go(getMaxPage());
+        pets_pagination.innerHTML=(getMaxPage()+1).toString();
+    })
+    for(let i =0;i<pets.length; i++){
+        cards_container.querySelector(`.pets__card-button-${i}`).addEventListener('click', ()=>{
+            showModal(i);
+        })
+    }
+    splidePets.on('resize', ()=>{
+        let page=Number(pets_pagination.innerHTML);
+        if(page>getMaxPage()+1){
+            pets_pagination.innerHTML=(getMaxPage()+1).toString();
+            splidePets.go(getMaxPage());
+        }
+    })
 })
