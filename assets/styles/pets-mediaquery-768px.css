@@ -2,13 +2,4 @@
     .pets__cards{
         max-width: 580px;
     }
-    .pets__card:nth-child(n){
-        display: flex;
-    }
-    .pets__card:nth-child(n+7){
-        display: none;
-    }
-    .pets__arrows--mobile{
-        gap: 0;
-    }
 }
